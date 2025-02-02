@@ -8,6 +8,45 @@
     <!-- <link rel="stylesheet" href="./styles.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes ping-pong {
+            0% {
+                top: 0;
+                left: 0;
+                background-color: yellow;
+            }
+  
+            50% {
+                top: 200px;
+                background-color: red;
+            }
+  
+            100% {
+                top: 0;
+                left: 700px;
+                background-color: yellow;
+            }
+        }
+  
+        .stage {
+            width: 500px;
+            height: 200px;
+            background-color: lightgrey;
+           align-items: center;
+        }
+  
+        .stage:hover .ball {
+            animation: ping-pong 4s ease-in-out .01s infinite alternate;
+        }
+  
+        .ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+            position: relative;
+        }
+    </style>
 </head>
 <body class="px-7">
     
@@ -51,6 +90,11 @@
                     <img class="w-1/2" src="./c2-assets/hero-vegetables.png" alt="vegetables">
                 </div>
          </div>
+         
+         <!-- animations -->
+      <div class="stage">
+        <div class="ball"> <img src="./c2-assets/logo-header.png" alt=""></div>
+       </div>
   </header>
   <body>
 
