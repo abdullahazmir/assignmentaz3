@@ -9,34 +9,36 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @keyframes ping-pong {
+        @keyframes motion {
             0% {
                 top: 0;
-                left: 0;
+                left: 5%;
                 background-color: yellow;
             }
   
             50% {
-                top: 200px;
+              top: 50%;
                 background-color: red;
             }
   
             100% {
                 top: 0;
-                left: 700px;
+                /* right: 5%; */
+                left: 90%;
                 background-color: yellow;
             }
         }
   
-        .stage {
-            width: 500px;
+        .animated {
+         
+            width: 100%;
             height: 200px;
-            background-color: lightgrey;
+            background-color: transparent;
            align-items: center;
         }
   
-        .stage:hover .ball {
-            animation: ping-pong 4s ease-in-out .01s infinite alternate;
+        .animated:hover .ball {
+            animation: motion 3s ease-in-out .01s infinite;
         }
   
         .ball {
@@ -92,7 +94,7 @@
          </div>
          
          <!-- animations -->
-      <div class="stage">
+      <div class="animated">
         <div class="ball"> <img src="./c2-assets/logo-header.png" alt=""></div>
        </div>
   </header>
@@ -153,7 +155,7 @@
    
 
     <!-- card 1 -->
-    <div class="card bg-stone-300 w-96 shadow-xl rounded-2xl">
+    <div class="card bg-stone-300 md:w-96  shadow-xl rounded-2xl">
         <figure>
          <img class="w-[20%] mx-auto bg-black rounded-xl" src="./c2-assets/service.png" alt="">
         </figure>
@@ -166,7 +168,7 @@
     </div>
 
     <!-- card 2 -->
-    <div class="card bg-stone-300  w-96 shadow-xl rounded-2xl">
+    <div class="card bg-stone-300  md:w-96 shadow-xl rounded-2xl">
         <figure>
          <img class="w-[20%] mx-auto bg-black rounded-xl" src="./c2-assets/delivery.png" alt="">
         </figure>
@@ -177,7 +179,7 @@
         </div>
      </div>
      <!-- card 3 -->
-     <div class="card bg-stone-300  w-96 shadow-xl rounded-2xl">
+     <div class="card bg-stone-300  md:w-96 shadow-xl rounded-2xl">
         <figure>
          <img class="w-[20%] mx-auto bg-black rounded-xl" src="./c2-assets/healthy.png" alt="">
         </figure>
@@ -194,13 +196,13 @@
 
   <section>
     <h3 class="text-5xl text-green-500 pb-10"> Popular Products</h3>
-    <div class="card grid   md:grid-cols-5 grid-cols-2  grid-rows-3  bg-stone-200 space-y-4">
-       <div class=" row-start-1  row-end-4 col-start-1 col-end-3 big-card  gap-3 p-10">
+    <div class="card grid  gap-3 md:grid-cols-5 grid-cols-2  grid-rows-3  bg-stone-200 ">
+       <div class=" row-start-1  row-end-4 col-start-1 col-end-3 big-card gap-3">
         <div class="card bg-gradient-to-tl from-green-200 to-green-600 w-full shadow-xl ">
            <div class="card-body bg-">
              <h2 class="card-title text-white text-4xl">30% OFF</h2>
              <p>Discover something better about your food habits, as food is a good essentials for your health.</p>
-             <button>Buy Now</button>
+             <button class="text-white">Buy Now</button>
            </div>
            <figure>
              <img
@@ -209,7 +211,7 @@
            </figure>
          </div>
        </div>
-       <div class="flex justify-normal gap-5 bg-white rounded-xl items-center mr-20">
+       <div class="flex justify-normal gap-x-5 bg-white rounded-xl items-center">
          <div>
            <img src="./c2-assets/Group 16.png" alt="">
          </div>
@@ -219,9 +221,9 @@
             <h3>$39.99</h3>
          </div>
        </div>
-       <div class="flex justify-normal bg-white rounded-xl mr-20 items-center gap-5">
+       <div class="flex justify-normal bg-white rounded-xl items-center gap-5">
          <div>
-           <img src="./c2-assets/Group 16 (1).png" alt="">
+           <img src="./c2-assets/Group 17.png" alt="">
          </div>
          <div>
            <div class="flex justify-normal"><img src="./c2-assets/fi_2107957.png" alt="">  <h3>4.5</h3></div>
@@ -229,9 +231,9 @@
             <h3>$39.99</h3>
          </div>
        </div>
-       <div class="flex justify-normal bg-white rounded-xl mr-20 items-center gap-5">
+       <div class="flex justify-normal bg-white rounded-xl items-center gap-5">
          <div>
-           <img src="./c2-assets/Group 16 (2).png" alt="">
+           <img src="./c2-assets/Group 18.png" alt="">
          </div>
          <div>
            <div class="flex justify-normal"><img src="./c2-assets/fi_2107957.png" alt="">  <h3>4.5</h3></div>
@@ -239,7 +241,7 @@
             <h3>$39.99</h3>
          </div>
        </div>
-       <div class="flex justify-normal bg-white rounded-xl items-center mr-20 gap-5">
+       <div class="flex justify-normal bg-white rounded-xl items-center gap-5">
          <div>
            <img src="./c2-assets/Group 16.png" alt="">
          </div>
@@ -249,9 +251,9 @@
             <h3>$39.99</h3>
          </div>
        </div>
-       <div class="flex justify-normal bg-white rounded-xl items-center mr-20 gap-5">
+       <div class="flex justify-normal bg-white rounded-xl items-center gap-5">
          <div>
-           <img src="./c2-assets/Group 16 (1).png" alt="">
+           <img src="./c2-assets/Group 17.png" alt="">
          </div>
          <div>
            <div class="flex justify-normal"><img src="./c2-assets/fi_2107957.png" alt="">  <h3>4.5</h3></div>
@@ -259,9 +261,9 @@
             <h3>$39.99</h3>
          </div>
        </div>
-       <div class="flex justify-normal bg-white rounded-xl items-center mr-20 gap-5">
+       <div class="flex justify-normal bg-white rounded-xl items-center  gap-5">
          <div>
-           <img src="./c2-assets/Group 16 (2).png" alt="">
+           <img src="./c2-assets/Group 18.png" alt="">
          </div>
          <div>
            <div class="flex justify-normal"><img src="./c2-assets/fi_2107957.png" alt="">  <h3>4.5</h3></div>
@@ -269,7 +271,7 @@
             <h3>$39.99</h3>
          </div>
        </div>
-       <div class="flex justify-normal bg-white items-center rounded-xl  mr-20 gap-5">
+       <div class="flex justify-normal bg-white items-center rounded-xl   gap-5">
          <div>
            <img src="./c2-assets/Group 16.png" alt="">
          </div>
@@ -279,9 +281,9 @@
             <h3>$39.99</h3>
          </div>
        </div>
-       <div class="flex justify-normal bg-white items-center rounded-xl mr-20 gap-5">
+       <div class="flex justify-normal bg-white items-center rounded-xl  gap-5">
          <div>
-           <img src="./c2-assets/Group 16 (1).png" alt="">
+           <img src="./c2-assets/Group 17.png" alt="">
          </div>
          <div>
            <div class="flex justify-normal"><img src="./c2-assets/fi_2107957.png" alt="">  <h3>4.5</h3></div>
@@ -289,9 +291,9 @@
             <h3>$39.99</h3>
          </div>
        </div>
-       <div class=" justify-normal bg-white hidden md:flex items-center rounded-xl mr-20 gap-5">
+       <div class=" justify-normal bg-white hidden md:flex items-center rounded-xl  gap-5">
          <div>
-           <img src="./c2-assets/Group 16 (2).png" alt="">
+           <img src="./c2-assets/Group 18.png" alt="">
          </div>
           <div>
            <div class="flex justify-normal"><img src="./c2-assets/fi_2107957.png" alt="">  <h3>4.5</h3></div>
@@ -351,11 +353,11 @@
    <section class=" md:flex-row  flex flex-col md:items-end items-start bg-green-600 p-3 h-auto  pt-[400px] md:pt-[300px] lg:mt-0 gap-10   md:gap-0 ">
      <div class="image w-1/2">
         <img src="./c2-assets/logo-footer.png" alt="">
-        <p>Discover a world of treats, toys, and essentials <br> handpicked for your furry friends</p>
+        <p class="text-white">Discover a world of treats, toys, and essentials <br> handpicked for your furry friends</p>
 
     </div>
     <div class="menu w-1/5">
-        <ul class="list-none space-y-3">
+        <ul class="list-none space-y-3 text-white">
             <li>Product</li>
             <li>Services</li>
             <li>Contact us</li>
@@ -363,7 +365,7 @@
 
     </div>
     <div class="icon flex flex-wrap">
-        <h3  class="w-full">Follow Us</h3>
+        <h3  class="w-full text-white">Follow Us</h3>
         <div class="gap-2 flex">
             <img class="w-8 h-8" src="./c2-assets/Group (2).png" alt="">
             <img class="w-8 h-8" src="./c2-assets/Vector (1).png" alt="">
